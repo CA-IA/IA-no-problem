@@ -1,1 +1,309 @@
+/* Modern Design with Animations */
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 20px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  border-radius: 10px;
+  animation: slideDown 0.5s ease-in-out;
+}
+
+header h1 {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 2.5rem;
+  color: #667eea;
+  text-align: center;
+}
+
+/* Main Content */
+main {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Buttons */
+button,
+.btn {
+  font-family: Verdana, Geneva, sans-serif;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin: 10px 5px;
+}
+
+/* Primary Button */
+.btn-primary,
+button.primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-primary:hover,
+button.primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(102, 126, 234, 0.6);
+  animation: pulse 0.6s ease-in-out;
+}
+
+/* Secondary Button */
+.btn-secondary,
+button.secondary {
+  background-color: #f0f0f0;
+  color: #667eea;
+  border: 2px solid #667eea;
+}
+
+.btn-secondary:hover,
+button.secondary:hover {
+  background-color: #667eea;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Success Button */
+.btn-success,
+button.success {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(17, 153, 142, 0.4);
+}
+
+.btn-success:hover,
+button.success:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(17, 153, 142, 0.6);
+}
+
+/* Danger Button */
+.btn-danger,
+button.danger {
+  background: linear-gradient(135deg, #eb3349 0%, #f45c43 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(235, 51, 73, 0.4);
+}
+
+.btn-danger:hover,
+button.danger:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(235, 51, 73, 0.6);
+}
+
+/* Button Active State */
+button:active,
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* Text Styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: Verdana, Geneva, sans-serif;
+  color: #333;
+  margin-bottom: 15px;
+  animation: fadeInUp 0.6s ease-in-out;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin-bottom: 15px;
+  color: #555;
+}
+
+/* Card Component */
+.card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 15px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+  font-family: Verdana, Geneva, sans-serif;
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 8px rgba(102, 126, 234, 0.3);
+}
+
+/* Animation Keyframes */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  main {
+    padding: 20px;
+  }
+
+  button,
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  main {
+    padding: 15px;
+  }
+
+  button,
+  .btn {
+    padding: 10px 15px;
+    font-size: 0.85rem;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+}
